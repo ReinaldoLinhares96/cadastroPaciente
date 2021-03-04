@@ -1,0 +1,18 @@
+<h2>Lista de pacientes</h2>
+<div class="card mt-4"><a href="/admin/pacientes"><button  class="btn btn-success">Voltar a pagina principal</button></a></div>
+
+{{#each pacientes}}
+   <div class="card mt-4">
+       <div class="card-body mt-4">
+           <h4>Paciente: {{nome}}</h4>
+           <small>Diagnostico: {{diagnostico}}</small>
+           <a href="/admin/pacientes/edit/{{_id}}"><button  class="btn btn-success">editar paciente</button></a>
+           <form action="/admin/pacientes/deletar" method="POST">
+               <input type="hidden" name="id" value="{{_id}}">
+               <button type="submit"  class="btn btn-success" class=" card mt-2">deletar paciente</button>
+           </form>
+       </div>
+   </div>
+{{else}}
+
+{{/each}}

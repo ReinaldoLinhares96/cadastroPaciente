@@ -1,0 +1,30 @@
+<h2>Editar Paciente:</h2>
+<div class="card mt-4">
+    <form action="/admin/pacientes/edit" method="POST">
+    <input type="hidden" name="id" value="{{pacientes._id}}">
+
+    <p>Nome: </p>
+    <input type="text" name="Nome" class="form-control" value="{{pacientes.Nome}}">
+    <p>Endereço: </p>
+    <input type="text" name="Endereco" class="form-control" value="{{pacientes.Endereco}}">
+    <p>Numero: </p>
+    <input type="number" name="Numero" class="form-control" value="{{pacientes.Numero}}">
+    <p>Bairro: </p>
+    <input type="text" name="Bairro" class="form-control" value="{{pacientes.Bairro}}">
+    <p>Cidade: </p>
+    <input type="text" name="Cidade" class="form-control" value="{{pacientes.Cidade}}">
+    <p>Estado: </p>
+    <input type="text" name="Estado" class="form-control" value="{{pacientes.Estado}}">
+    <p>Telefone: </p>
+    <input type="text" name="Telefone" class="form-control" value="{{pacientes.Telefone}}">
+    <p>Email: </p>
+    <input type="text" name="Email" class="form-control" value="{{pacientes.Email}}">
+    <p>Data de Nascimento: </p>
+    <input type="text" name="Data" class="form-control" value="{{pacientes.Data}}">
+    <p>cpf: </p>
+    <input type="text" name="cpf" class="form-control" value="{{pacientes.cpf}}">
+    <p>Diagnostico: </p>
+    <textarea name="Diagnostico" class="form-control" value="{{pacientes.Diagnostico}}"></textarea>
+    <button type="submit" class="btn btn-success">Editar Paciente</button>
+</form>
+</div>
